@@ -1,8 +1,95 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family:"gotham";
+  src: url("assets/gotham.ttf") format("truetype");
 }
 
-.container {
+@font-face {
+  font-family:"gotham_thin";
+  src: url("assets/gotham_thin.ttf") format("truetype");
+}
+
+.App {
+  font-family: 'gotham', sans-serif;
+}
+
+.container-fluid {
   padding: 0;
   margin: 0;
+}
+
+#home {
+  background-image: url('assets/bg2.png');
+  background-position: 0% -5%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 850px;
+}
+
+nav {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.navbar {
+  border: 0;
+  background-color: transparent;
+}
+
+.navbar-brand {
+  color: #fb7875;
+  font-size: 32px;
+  margin: 0.5em;
+  padding-left: 2.3em;
+  padding-top: 1em;
+  font-weight: 100;
+}
+
+.data {
+  font-size: 45px;
+  color: #4f497c;
+}
+
+.data_down {
+  font-size: 17px;
+  color: #4f497c;
+  font-family: 'gotham_thin', sans-serif;
+  padding: 0.2em;
+}
+
+.data_cont {
+  font-size: 20px;
+  color: #4f497c;
+  margin-top: 10%;
+}
+
+.content {
+  padding: 5em;
+  padding-top: 3em;
+  letter-spacing: 0.7px;
+  margin-top: 8%;
+  margin-left: 3%;
+}
+
+.my_btn {
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fb7875;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  border: 0;
+}
+
+.my_btn1 {
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fb7875;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  border: 0;
+  margin-left: 1em;
 }
