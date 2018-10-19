@@ -10,8 +10,8 @@ class Data extends Component {
         <h3 className="data_cont">Continue as</h3>
         <table>
           <tr style={{ width: '450px' }}>
-            <td><button className="btn btn-default my_btn">Nurse</button></td>
-            <td><button className="btn btn-default my_btn1">Doctor</button></td>
+            <td><a href="/rooms" className="btn btn-default my_btn">Nurse</a></td>
+            <td><a href="/docs" className="btn btn-default my_btn1">Doctor</a></td>
           </tr>
         </table>
       </div>

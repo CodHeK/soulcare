@@ -80,6 +80,7 @@ nav {
   font-size: 17px;
   text-align: center;
   border: 0;
+  line-height: 30px;
 }
 
 .my_btn1 {
@@ -92,4 +93,108 @@ nav {
   text-align: center;
   border: 0;
   margin-left: 1em;
+  line-height: 30px;
+}
+
+.menu {
+  width: 90%;
+  height: 720px;
+  background-color: #fb7875;
+  color: white;
+  font-family: 'gotham_thin', sans-serif;
+  padding: 0.5em;
+  text-align: left;
+  font-size: 18px
+}
+
+.menu_close {
+  width: 25%;
+  height: 720px;
+  background-color: #fb7875;
+  color: white;
+  font-family: 'gotham_thin', sans-serif;
+  padding: 0.5em;
+  text-align: center;
+  font-size: 18px
+}
+
+.name {
+  height: 90px;
+  line-height: 90px;
+  padding-top: 0.2em;
+}
+
+.each {
+  height: 90px;
+}
+
+.icon {
+  color: white;
+  font-size: 20px;
+  float: right;
+  padding: 0.6em;
+  width: 100%;
+  height: 80px;
+  text-align: right;
+}
+
+.icon:hover {
+  color: white;
+  font-size: 20px;
+  float: right;
+  padding: 0.6em;
+  width: 100%;
+  height: 80px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.icon_left {
+  color: white;
+  font-size: 24px;
+  float: right;
+  padding: 0.3em;
+  padding-top: 1em;
+}
+
+.icon_left1 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 0.3em;
+  padding-top: 1em;
+}
+
+.icon_left2 {
+  font-size: 24px;
+  color: #fb7875;
+  padding-top: 1em;
+}
+
+.close {
+  display: none;
+}
+
+.cont {
+  text-align: center;
+  padding-top: 10%;
+}
+
+.started {
+  font-size: 30px;
+  color: #737373;
+}
+
+.select {
+  font-size: 19px;
+  font-family: 'gotham_thin', sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.link {
+  color: #fb7875;
+}
+
+.navbar-right, .dropdown {
+  width: 100px;
 }
