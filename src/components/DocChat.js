@@ -83,7 +83,7 @@ class DocChat extends Component {
                         </Query>
                       </div>
                       <div className="col-md-5">
-                        <i className="fas fa-share-square icon_left_sq" onClick={this.select.bind(this, "doctor")}></i>
+                        
                       </div>
                     </div>
                   </div>
