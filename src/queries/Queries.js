@@ -10,3 +10,15 @@ export const FetchAllRoomsQuery = gql`
     }
   }
 `;
+
+export const FetchNurses = gql`
+  query nurseQuery($room_no: String!) {
+    nurse (
+      where: { room_no: {_eq: $room_no }}
+    ) {
+      id
+      name
+      room_no
+    }
+  }
+`;

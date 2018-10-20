@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { FetchAllRoomsQuery } from '../queries/Queries';
+import { FetchAllRoomsQuery, FetchNurses } from '../queries/Queries';
 import { Query } from "react-apollo";
 import TodoLoader from '../Loaders/TodoLoader';
+import Nurses from './Nurses';
 import $ from 'jquery';
 import '../App.css';
 
@@ -21,7 +22,7 @@ class Ward extends Component {
               return <p>Error </p>;
 
             if(data.room.length == 0)
-              return <h3>No todos to complete :\/ </h3>;
+              return <h3>No rooms added yet! :\/ </h3>;
 
             return data.room.map((r) => (
               <div className="row" key={r.id}>
@@ -33,7 +34,7 @@ class Ward extends Component {
                     </div>
                     <div className="col-md-6">
                       <h2 className="header">NURSES</h2>
-                      <h5 className="head_val">Pradeep Agam</h5>
+                      <Nurses room_no={r.room_no} />
                     </div>
                   </div>
                   <div className="row dat">
