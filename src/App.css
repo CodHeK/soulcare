@@ -381,7 +381,7 @@ nav {
   font-size: 16px;
   height: 40px;
   border: 0;
-  width: 99%;
+  width: 103%;
   background-color: rgb(211,211,211,0.3);
   border-radius: 8px;
 }
@@ -394,6 +394,7 @@ nav {
   height: 80px;
   bottom: 0;
   position: fixed;
+  z-index: 100;
 }
 
 .inp_form {
@@ -402,8 +403,10 @@ nav {
   width: 100%;
   background-color: white;
   height: 60px;
-  margin-top: 21.5%;
-  position: fixed;
+  z-index: 100;
+  margin-bottom: 15%;
+  position: relative;
+  display: run-in;
   text-align: left;
 }
 
@@ -418,9 +421,52 @@ nav {
 }
 
 .note_format {
-  width: 300px;
-  height: 100px;
+  width: 400px;
+  height: 195px;
   background-color: white;
   color: black;
   font-size: 20px;
+  margin: 1em;
+  border-radius: 10px;
+  padding-left: 1.2em;
+}
+
+.note_format_d {
+  width: 400px;
+  height: 195px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  margin: 1em;
+  border-radius: 10px;
+  padding-left: 1em;
+  border: 1px solid #fb7875;
+}
+
+.note_tit {
+  font-family: 'gotham_thin', sans-serif;
+  color: #000;
+  font-size: 16px;
+  text-align: left;
+}
+
+.note_dat {
+  font-family: 'gotham', sans-serif;
+  color: #000;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.date {
+  font-size: 20px;
+  font-family: 'gotham', sans-serif;
+  color: black;
+  position: absolute;
+  text-align: left;
+  padding: 0.3em;
+}
+
+.block {
+  padding: 0.4em;
 }

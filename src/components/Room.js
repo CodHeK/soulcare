@@ -66,7 +66,7 @@ class Room extends Component {
       var display = <Patient room_no={room_no}/>;
     }
     else if(option == "chat") {
-      var display = <Chat pat_id={pat_id} room_no={room_no}/>;
+      var display = <Chat pat_id={pat_id} />;
     }
 
     return (

@@ -45,15 +45,52 @@ export const FetchAllPatientsQuery = gql`
 `;
 
 export const FetchAllNotesQuery = gql`
-  query notesQuery($patient_id: String!) {
+  query notesQuery($patient_id: Int!) {
     note (
-      where: { patient_id: { _eq: $patient_id }}
+      where: { patient_id: { _eq: $patient_id }, type: { _eq: "nurse" }}
     ) {
       id
       type
       patient_id
       desp
       time
+    }
+  }
+`;
+
+export const FetchAllNotesDocsQuery = gql`
+  query notesDocsQuery($patient_id: Int!) {
+    note (
+      where: { patient_id: { _eq: $patient_id }, type: { _eq: "doctor" }}
+    ) {
+      id
+      type
+      patient_id
+      desp
+      time
+    }
+  }
+`;
+
+export const InsertNoteQuery = gql`
+  mutation addNote($type: String!, $patient_id: Int!, $desp: String!, $time: String!) {
+    insert_note (
+      objects:[
+        {
+          type: $type,
+          patient_id: $patient_id,
+          desp: $desp,
+          time: $time
+        }
+      ]
+    ) {
+      returning {
+        id
+        type
+        patient_id
+        desp
+        time
+      }
     }
   }
 `;
