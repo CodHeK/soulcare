@@ -6,6 +6,7 @@ import Ward from './Ward';
 import MenuBarSmall from './MenuBarSmall';
 import Patient from './Patient';
 import Chat from './Chat';
+import Doctor from './Doctor';
 import '../App.css';
 
 class Room extends Component {
@@ -46,7 +47,7 @@ class Room extends Component {
 
   render() {
     const { open, option } = this.state;
-    const { room_no, pat_id } = this.props.match.params;
+    const { room_no, pat_id, doc } = this.props.match.params;
     if(open === 1) {
       var menu = <MenuBar func={this.change.bind(this)} />;
       var btn = <i className="fas fa-arrow-left icon" onClick={this.close.bind(this)}></i>;
@@ -66,7 +67,10 @@ class Room extends Component {
       var display = <Patient room_no={room_no}/>;
     }
     else if(option == "chat") {
-      var display = <Chat pat_id={pat_id} />;
+      var display = <Chat pat_id={pat_id} func={this.change.bind(this)} />;
+    }
+    else if(option == "doctor") {
+      var display = <Doctor func={this.change.bind(this)} pat_id={pat_id} />;
     }
 
     return (

@@ -47,7 +47,8 @@ export const FetchAllPatientsQuery = gql`
 export const FetchAllNotesQuery = gql`
   query notesQuery($patient_id: Int!) {
     note (
-      where: { patient_id: { _eq: $patient_id }, type: { _eq: "nurse" }}
+      where: { patient_id: { _eq: $patient_id }, type: { _eq: "nurse" }},
+      order_by: id_desc
     ) {
       id
       type
@@ -61,7 +62,8 @@ export const FetchAllNotesQuery = gql`
 export const FetchAllNotesDocsQuery = gql`
   query notesDocsQuery($patient_id: Int!) {
     note (
-      where: { patient_id: { _eq: $patient_id }, type: { _eq: "doctor" }}
+      where: { patient_id: { _eq: $patient_id }, type: { _eq: "doctor" }},
+      order_by: id_desc
     ) {
       id
       type
@@ -91,6 +93,39 @@ export const InsertNoteQuery = gql`
         desp
         time
       }
+    }
+  }
+`;
+
+export const getPatientNameQuery = gql`
+  query nameQuery($pat_id: Int!) {
+    patient (
+      where: { id: { _eq: $pat_id }}
+    ) {
+      name
+    }
+  }
+`;
+
+export const getDocsQuery = gql`
+  query docsQuery {
+    doctors {
+      id
+      name
+      special
+      patients
+      position
+    }
+  }
+`;
+
+export const subscribeQuery = gql`
+  mutation subscribe($id: Int!, $patients: json) {
+    update_doctors (
+      where: { id: { _eq: $id }},
+      _set: { patients: $patients }
+    ) {
+      affected_rows
     }
   }
 `;

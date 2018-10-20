@@ -362,6 +362,36 @@ nav {
   margin-top: 5.5%;
 }
 
+.icon_left_sq:hover {
+  color: #fb7875;
+  font-size: 33px;
+  float: right;
+  text-align: left;
+  margin-top: 5.5%;
+  cursor: pointer;
+}
+
+.icon_left_sq1 {
+  color: #fff;
+  font-size: 23px;
+  float: right;
+  text-align: left;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-top: 5.5%;
+}
+
+.icon_left_sq1:hover {
+  color: #fff;
+  font-size: 23px;
+  float: right;
+  text-align: left;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-top: 5.5%;
+  cursor: pointer;
+}
+
 .add_note {
   padding-left: 2em;
   font-family: 'gotham_thin', sans-serif;

@@ -35,7 +35,6 @@ class Patient extends Component {
             if(data.patient.length == 0)
               return <h3>No patients added yet! :\/ </h3>;
 
-            console.log(data.patient);
             return data.patient.map((p) => (
               <div className="row dab" key={p.id}>
                 <div className="col-md-12 box1">
