@@ -176,6 +176,13 @@ nav {
   padding-top: 1em;
 }
 
+.icon_right {
+  color: white;
+  font-size: 24px;
+  float: right;
+  padding: 0.4em;
+}
+
 .icon_left1 {
   color: white;
   font-size: 24px;

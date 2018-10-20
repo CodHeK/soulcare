@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Link, Route, Redirect } from 'react-ro
 import Home from './components/Home';
 import Room from './components/Room';
 import Patient from './components/Patient';
+import Docs from './components/Docs';
+import DocChat from './components/DocChat';
 import './App.css';
 
 const client = new ApolloClient({
@@ -19,8 +21,11 @@ class App extends Component {
           <Switch>
             <Route path="/" exact={true} component={Home} />
             <Route path="/rooms" exact={true} component={Room} />
+            <Route path="/docs" exact={true} component={Docs} />
             <Route path="/rooms/:room_no" exact={true} component={Room} />
             <Route path="/patient/:pat_id" exact={true} component={Room} />
+            <Route path="/docs/:doc_id" exact={true} component={Docs} />
+            <Route path="/docs/patients/:pat_id" exact={true} component={Docs} />
           </Switch>
         </div>
       </ApolloProvider>

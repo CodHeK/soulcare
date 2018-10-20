@@ -44,6 +44,27 @@ export const FetchAllPatientsQuery = gql`
   }
 `;
 
+export const FetchAllPatientsQueryById = gql`
+  query patientQuery($pat_id: Int!) {
+    patient (
+      where: { id: {_eq: $pat_id }},
+      order_by: priority_desc
+    ) {
+      id
+      name
+      phone
+      age
+      room_no
+      medicine
+      priority
+      start_date
+      discharge_date
+      disease
+      doctor
+    }
+  }
+`;
+
 export const FetchAllNotesQuery = gql`
   query notesQuery($patient_id: Int!) {
     note (
@@ -126,6 +147,16 @@ export const subscribeQuery = gql`
       _set: { patients: $patients }
     ) {
       affected_rows
+    }
+  }
+`;
+
+export const getsubsQuery = gql`
+  query subQuery($doc_id: Int!) {
+    doctors (
+      where: { id: { _eq: $doc_id }}
+    ) {
+      patients
     }
   }
 `;

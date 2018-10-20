@@ -6,7 +6,7 @@ import Nurses from './Nurses';
 import $ from 'jquery';
 import '../App.css';
 
-class Patient extends Component {
+class AllDocs extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,27 +16,6 @@ class Patient extends Component {
 
   select(val, e) {
     this.props.func(val);
-  }
-
-  subscribeDoc(patients, pat_id, doc_id, subscribe, e) {
-    var new_patients = patients;
-    var flag = 0;
-    for(var i=0;i<new_patients["id"].length;i++) {
-      if(new_patients["id"][i] === parseInt(pat_id)) {
-          flag = 1;
-          break;
-      }
-    }
-    if(flag === 1) {
-      this.setState({ subscribed: "Doctor already subscribed!" });
-    }
-    else {
-      new_patients["id"].push(parseInt(pat_id));
-      subscribe({
-        variables: { id: doc_id, patients: new_patients },
-      });
-      this.setState({ subscribed: "Doctor subscribed!" });
-    }
   }
 
   render() {
@@ -70,15 +49,9 @@ class Patient extends Component {
                       <h2 className="header">SPECIALIZATION</h2>
                       <h5 className="head_val">{p.special}</h5>
                     </div>
-                    <Mutation mutation={subscribeQuery}>
-                    {
-                      (subscribe, { data }) => (
-                        <div className="arrow1">
-                            <i className="fas fa-share-square icon_left_sq1" onClick={this.subscribeDoc.bind(this, p.patients, this.props.pat_id, p.id, subscribe)}></i>
-                        </div>
-                      )
-                    }
-                    </Mutation>
+                    <div className="arrow1">
+                        <a href={"/docs/" + p.id}><i className="fas fa-arrow-right icon_right"></i></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,4 +64,4 @@ class Patient extends Component {
   }
 }
 
-export default Patient;
+export default AllDocs;
