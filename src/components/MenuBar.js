@@ -3,10 +3,19 @@ import $ from 'jquery';
 import '../App.css';
 
 class MenuBar extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  select(val, e) {
+    this.props.func(val);
+  }
+
+
   render() {
     return (
       <div className="container-fluid menu">
-          <div className="row each">
+          <div className="row each" onClick={this.select.bind(this, "ward")}>
             <div className="col-md-4" style={{ textAlign: 'center'}}>
               <i className="fas fa-home icon_left"></i>
             </div>
@@ -15,7 +24,7 @@ class MenuBar extends Component {
             </div>
           </div>
 
-          <div className="row each">
+          <div className="row each" onClick={this.select.bind(this, "patient")}>
             <div className="col-md-4" style={{ textAlign: 'center'}}>
               <i className="far fa-user icon_left"></i>
             </div>
@@ -24,7 +33,7 @@ class MenuBar extends Component {
             </div>
           </div>
 
-          <div className="row each">
+          <div className="row each" onClick={this.select.bind(this, "doctor")}>
             <div className="col-md-4" style={{ textAlign: 'center'}}>
               <i className="far fa-address-card icon_left"></i>
             </div>

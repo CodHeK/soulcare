@@ -119,13 +119,32 @@ nav {
 }
 
 .name {
-  height: 90px;
-  line-height: 90px;
+  height: 60px;
+  line-height: 40px;
   padding-top: 0.2em;
+  font-size: 16px;
+}
+
+.name h3 {
+  padding-top: 2%;
+  font-size: 20px;
 }
 
 .each {
-  height: 90px;
+  height: 70px;
+  margin-top: 1.5em;
+}
+
+.each:hover {
+  color: #fb7875;
+  background-color: white;
+  cursor: pointer;
+}
+
+.each:hover .icon_left {
+  color: #fb7875;
+  background-color: white;
+  cursor: pointer;
 }
 
 .icon {
@@ -168,7 +187,7 @@ nav {
 .icon_left2 {
   font-size: 24px;
   color: #fb7875;
-  padding-top: 1em;
+  padding-top: 0.8em;
 }
 
 .close {
@@ -197,4 +216,68 @@ nav {
 
 .navbar-right, .dropdown {
   width: 100px;
+}
+
+.dropdown-toggle:hover {
+  background-color: transparent;
+}
+
+.patient {
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  color: #fb7875;
+}
+
+.box {
+  width: 490px;
+  height: 220px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: 3%;
+}
+
+.search {
+  width: 240px;
+  height: 35px;
+  border: 0;
+  margin-left: 2%;
+  border: 1px solid #737373;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'gotham_thin', sans-serif;
+  color: black;
+  margin-top: 3%;
+}
+
+.header {
+  font-size: 18px;
+  color: #000;
+  font-family: 'gotham_thin', sans-serif;
+}
+
+.head_val {
+  font-size: 15px;
+  color: #737373;
+  font-family: 'gotham_thin', sans-serif;
+}
+
+.dat {
+  text-align: left;
+  padding: 1em;
+  width: 98%;
+}
+
+.arrow {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #fb7875;
+  color: white;
+  text-align: center;
+  padding: 1%;
+  float: right;
+  margin-top: -10%;
 }
