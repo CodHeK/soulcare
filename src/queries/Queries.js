@@ -22,3 +22,38 @@ export const FetchNurses = gql`
     }
   }
 `;
+
+export const FetchAllPatientsQuery = gql`
+  query patientQuery($room_no: String!) {
+    patient (
+      where: { room_no: {_eq: $room_no }},
+      order_by: priority_desc
+    ) {
+      id
+      name
+      phone
+      age
+      room_no
+      medicine
+      priority
+      start_date
+      discharge_date
+      disease
+      doctor
+    }
+  }
+`;
+
+export const FetchAllNotesQuery = gql`
+  query notesQuery($patient_id: String!) {
+    note (
+      where: { patient_id: { _eq: $patient_id }}
+    ) {
+      id
+      type
+      patient_id
+      desp
+      time
+    }
+  }
+`;

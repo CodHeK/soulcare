@@ -4,14 +4,31 @@ import MenuBar from './MenuBar';
 import Start from './Start';
 import Ward from './Ward';
 import MenuBarSmall from './MenuBarSmall';
+import Patient from './Patient';
+import Chat from './Chat';
 import '../App.css';
 
 class Room extends Component {
-  constructor() {
-    super();
-    this.state = {
-      open: 1,
-      option: "start",
+  constructor(props) {
+    super(props);
+    const { room_no, pat_id } = this.props.match.params;
+    if(room_no) {
+      this.state = {
+        open: 1,
+        option: "patient",
+      }
+    }
+    else if(pat_id) {
+      this.state = {
+        open: 1,
+        option: "chat",
+      }
+    }
+    else {
+      this.state = {
+        open: 1,
+        option: "start",
+      }
     }
   }
 
@@ -29,6 +46,7 @@ class Room extends Component {
 
   render() {
     const { open, option } = this.state;
+    const { room_no, pat_id } = this.props.match.params;
     if(open === 1) {
       var menu = <MenuBar func={this.change.bind(this)} />;
       var btn = <i className="fas fa-arrow-left icon" onClick={this.close.bind(this)}></i>;
@@ -42,7 +60,13 @@ class Room extends Component {
       var display = <Start />;
     }
     else if(option == "ward") {
-      var display = <Ward />
+      var display = <Ward func={this.change.bind(this)} />;
+    }
+    else if(option == "patient") {
+      var display = <Patient room_no={room_no}/>;
+    }
+    else if(option == "chat") {
+      var display = <Chat pat_id={pat_id} room_no={room_no}/>;
     }
 
     return (

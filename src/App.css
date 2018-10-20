@@ -222,7 +222,7 @@ nav {
   background-color: transparent;
 }
 
-.patient {
+.room, .patient {
   text-align: center;
 }
 
@@ -237,6 +237,16 @@ nav {
   border: 1px solid black;
   border-radius: 10px;
   margin-left: 3%;
+}
+
+.box1 {
+  width: 92%;
+  height: 140px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: 3%;
+  padding-top: 2%;
+  margin-top: 3%;
 }
 
 .search {
@@ -285,4 +295,132 @@ nav {
   padding: 1%;
   float: right;
   margin-top: -10%;
+}
+
+.arrow1 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #fb7875;
+  color: white;
+  text-align: center;
+  padding-top: 0.5%;
+  padding-right: 0.3%;
+  float: right;
+}
+
+.top_nav {
+  background-color: white;
+  height: 80px;
+  width: 95%;
+}
+
+.pat_name {
+  color: #000;
+  text-align: left;
+}
+
+.arr {
+  font-size: 20px;
+  color: #fb7875;
+  text-align: center;
+}
+
+.icons {
+  color: #fb7875;
+  font-size: 30px;
+  float: right;
+  margin-top: 36%;
+  width: 100%;
+  height: 80px;
+  text-align: right;
+}
+
+.chat_area {
+  background-color: rgb(211,211,211,0.3);
+  height: 370px;
+  width: 95%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 5px;
+}
+
+.icon_left2 {
+  color: #fb7875;
+  font-size: 38px;
+  float: right;
+  margin-top: -22%;
+  margin-right: 20%;
+  text-align: left;
+}
+
+.icon_left_sq {
+  color: #fb7875;
+  font-size: 33px;
+  float: right;
+  text-align: left;
+  margin-top: 5.5%;
+}
+
+.add_note {
+  padding-left: 2em;
+  font-family: 'gotham_thin', sans-serif;
+  color: black;
+  font-size: 16px;
+  height: 40px;
+  border: 0;
+  width: 100%;
+  background-color: rgb(211,211,211,0.3);
+  border-radius: 8px;
+}
+
+.add_note1 {
+  padding-left: 2em;
+  font-family: 'gotham_thin', sans-serif;
+  color: black;
+  font-size: 16px;
+  height: 40px;
+  border: 0;
+  width: 99%;
+  background-color: rgb(211,211,211,0.3);
+  border-radius: 8px;
+}
+
+.inp_area {
+  padding-right: 40%;
+  padding-top: 0.8em;
+  width: 100%;
+  background-color: white;
+  height: 80px;
+  bottom: 0;
+  position: fixed;
+}
+
+.inp_form {
+  padding-right: 40%;
+  padding-top: 0.8em;
+  width: 100%;
+  background-color: white;
+  height: 60px;
+  margin-top: 21.5%;
+  position: fixed;
+  text-align: left;
+}
+
+.note_add {
+  width: 100px;
+  height: 35px;
+  border: 0;
+  background-color: #fb7875;
+  color: white;
+  font-family: 'gotham_thin', sans-serif;
+  border-radius: 8px;
+}
+
+.note_format {
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
 }

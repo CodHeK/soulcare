@@ -7,10 +7,18 @@ import $ from 'jquery';
 import '../App.css';
 
 class Ward extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  select(val, e) {
+    this.props.func(val);
+  }
+
   render() {
     return (
-      <div className="container-fluid patient">
-        <h1 className="title">WardRooms</h1>
+      <div className="container-fluid room">
+        <h1 className="title">Ward Rooms</h1>
         <input className="form-control search" placeholder="Search" />
         <br />
         <Query query={FetchAllRoomsQuery}>
@@ -47,7 +55,7 @@ class Ward extends Component {
                     </div>
                   </div>
                   <div className="arrow">
-                    <i className="fas fa-arrow-right icon"></i>
+                    <a href={"/rooms/" + r.room_no} onClick={this.select.bind(this, "patient")}><i className="fas fa-arrow-right icon"></i></a>
                   </div>
                 </div>
               </div>
