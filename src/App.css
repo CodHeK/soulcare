@@ -270,6 +270,10 @@ nav {
   width: 98%;
 }
 
+.box {
+  margin-top: 2%;
+}
+
 .arrow {
   border-radius: 50%;
   width: 50px;

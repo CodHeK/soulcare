@@ -13,12 +13,14 @@ const client = new ApolloClient({
 class App extends Component {
   render() {
     return (
-      <div className="App container-fluid">
-        <Switch>
-          <Route path="/" exact={true} component={Home} />
-          <Route path="/rooms" exact={true} component={Room} />
-        </Switch>
-      </div>
+      <ApolloProvider client={client}>
+        <div className="App container-fluid">
+          <Switch>
+            <Route path="/" exact={true} component={Home} />
+            <Route path="/rooms" exact={true} component={Room} />
+          </Switch>
+        </div>
+      </ApolloProvider>
     );
   }
 }
