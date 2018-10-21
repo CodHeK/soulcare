@@ -30,11 +30,12 @@ class Bar extends Component {
     //   completed += meds["med"][i].completed;
     // }
     // var percy = (completed*100)/total;
-
+    var min = 0, max = 100;
+    const per = Math.floor(Math.random() * (max - min + 1)) + min;
     return (
       <div className="container-fluid patient">
-        <Progress completed={67} color={'#fb7875'} />
-        <h6 style={{ color: 'black', fontSize: '11px' }}>{60} %</h6>
+        <Progress completed={per} color={'#fb7875'} />
+        <h6 style={{ color: 'black', fontSize: '11px' }}>{per} %</h6>
       </div>
     )
   }
