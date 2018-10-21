@@ -4,6 +4,7 @@ import { Query } from "react-apollo";
 import TodoLoader from '../Loaders/TodoLoader';
 import TodoLoaderPatient from '../Loaders/TodoLoaderPatient';
 import Nurses from './Nurses';
+import Bar from './Bar';
 import $ from 'jquery';
 import '../App.css';
 
@@ -48,6 +49,9 @@ class AllP extends Component {
                     <div className="col-md-4">
                       <h2 className="header">TIMELINE</h2>
                       <h5 className="head_val">{p.start_date.slice(0, 10)} &nbsp;&nbsp; {p.discharge_date.slice(0, 10)}</h5>
+                      <div className="p_bar">
+                        <Bar meds={p.medicine} />
+                      </div>
                     </div>
                     <div className="col-md-2">
                       <h2 className="header">PROBLEM</h2>

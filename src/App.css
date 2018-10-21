@@ -507,3 +507,10 @@ nav {
 .block {
   padding: 0.4em;
 }
+
+.p_bar {
+  text-align: center;
+  width: 200px;
+  height: 15px;
+  margin-left: 18%;
+}
