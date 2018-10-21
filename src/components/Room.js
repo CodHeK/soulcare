@@ -7,6 +7,7 @@ import MenuBarSmall from './MenuBarSmall';
 import Patient from './Patient';
 import Chat from './Chat';
 import Doctor from './Doctor';
+import AllP from './AllP';
 import '../App.css';
 
 class Room extends Component {
@@ -64,13 +65,16 @@ class Room extends Component {
       var display = <Ward func={this.change.bind(this)} />;
     }
     else if(option == "patient") {
-      var display = <Patient room_no={room_no}/>;
+      var display = <Patient room_no={room_no} />;
     }
     else if(option == "chat") {
       var display = <Chat pat_id={pat_id} func={this.change.bind(this)} />;
     }
     else if(option == "doctor") {
       var display = <Doctor func={this.change.bind(this)} pat_id={pat_id} />;
+    }
+    else if(option == "patient_all") {
+      var display = <AllP func={this.change.bind(this)} />;
     }
 
     return (

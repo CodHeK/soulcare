@@ -44,6 +44,26 @@ export const FetchAllPatientsQuery = gql`
   }
 `;
 
+export const FetchPatientsQuery = gql`
+  query patientAllQuery {
+    patient (
+      order_by: priority_desc
+    ) {
+      id
+      name
+      phone
+      age
+      room_no
+      medicine
+      priority
+      start_date
+      discharge_date
+      disease
+      doctor
+    }
+  }
+`;
+
 export const FetchAllPatientsQueryById = gql`
   query patientQuery($pat_id: Int!) {
     patient (

@@ -55,7 +55,7 @@ class DocChat extends Component {
         {
            (addNote, { data }) => (
            <div className="container-fluid patient">
-             <h1 className="title">Chat Room</h1>
+             <h1 className="title">Subscribed Chat Room</h1>
              <h4 className="title1">PATIENT ID. {this.props.pat_id}</h4>
              <br />
               <div className="chat_room">
@@ -83,7 +83,7 @@ class DocChat extends Component {
                         </Query>
                       </div>
                       <div className="col-md-5">
-                        
+
                       </div>
                     </div>
                   </div>

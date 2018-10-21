@@ -18,7 +18,7 @@ class Ward extends Component {
   render() {
     return (
       <div className="container-fluid room">
-        <h1 className="title">Ward Rooms</h1>
+        <h1 className="title">Ward rooms</h1>
         <input className="form-control search" placeholder="Search" />
         <br />
         <Query query={FetchAllRoomsQuery}>

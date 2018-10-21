@@ -20,11 +20,11 @@ class MenuBar extends Component {
               <i className="fas fa-home icon_left"></i>
             </div>
             <div className="col-md-8 name">
-              <h3>WardRooms</h3>
+              <h3>Ward rooms</h3>
             </div>
           </div>
 
-          <div className="row each" onClick={this.select.bind(this, "patient")}>
+          <div className="row each" onClick={this.select.bind(this, "patient_all")}>
             <div className="col-md-4" style={{ textAlign: 'center'}}>
               <i className="far fa-user icon_left"></i>
             </div>
